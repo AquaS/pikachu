@@ -28,7 +28,7 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/getUserInfo", method = RequestMethod.POST)
     @LoggerManage(description = "获取用户信息")
     public ResponseData getUserInfo(@RequestBody User wxid) {
-        logger.info("request parama wxid is :{}", wxid);
+        logger.info("Request parama wxid is :{}", wxid);
 
         try {
             User user = userRepository.findByWxid(wxid.getWxid());
