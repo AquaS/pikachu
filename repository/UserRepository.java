@@ -12,4 +12,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByWxid(String wxid);
+
+    /**
+     * 根据工号查询用户
+     * @param workNum
+     * @return
+     */
+    User findByWorkNum(String workNum);
 }
