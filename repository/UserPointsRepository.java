@@ -7,19 +7,20 @@ import java.sql.Date;
 import java.util.List;
 
 /**
+ * 用戶積分倉儲服務
  * Created by Aqua on 2018/6/10.
  */
 public interface UserPointsRepository extends JpaRepository<UserPoints, Long> {
 
 //    UserPoints findUserPointsByWxid();
 
-    List<UserPoints> findByWxid(String wxid);
+    List<UserPoints> findByOpenId(String openId);
 
     /**
      * 查询用户某年份积分
-     * @param wxid
+     * @param openId
      * @param date
      * @return
      */
-    List<UserPoints> findByWxidAndDateGreaterThanEqual(String wxid, Date date);
+    List<UserPoints> findByOpenIdAndDateGreaterThanEqual(String openId, Date date);
 }

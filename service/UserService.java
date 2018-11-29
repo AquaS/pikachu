@@ -1,30 +1,31 @@
 package com.oee.pikachu.service;
 
-import com.oee.pikachu.domain.User;
+import com.oee.pikachu.domain.UserPbInfo;
 import com.oee.pikachu.domain.result.Response;
 
 /**
+ * 用戶服務
  * Created by Aqua on 2018/6/10.
  */
 public interface UserService {
 
     /**
      * 绑定用户微信
-     * @param user
+     * @param userPbInfo
      */
-    Response bindUser(User user);
+    Response bindUser(UserPbInfo userPbInfo);
 
     /**
      * 解除绑定
-     * @param user
+     * @param userPbInfo
      * @return
      */
-    Response unbindUser(User user);
+    Response unbindUser(UserPbInfo userPbInfo);
 
     /**
      * 修改用户信息
-     * @param user
+     * @param userPbInfo
      * @return
      */
-    Response modifyUserInfo(User user);
+    Response modifyUserInfo(UserPbInfo userPbInfo);
 }

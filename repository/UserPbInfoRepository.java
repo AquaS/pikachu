@@ -1,6 +1,6 @@
 package com.oee.pikachu.repository;
 
-import com.oee.pikachu.domain.User;
+import com.oee.pikachu.domain.UserPbInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -9,14 +9,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @Date: 2018/6/9
  * @Version: 1.0
  **/
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserPbInfoRepository extends JpaRepository<UserPbInfo, Long> {
 
-    User findByWxid(String wxid);
+    UserPbInfo findByOpenId(String openId);
 
     /**
      * 根据工号查询用户
-     * @param workNum
+     * @param jobNumber
      * @return
      */
-    User findByWorkNum(String workNum);
+    UserPbInfo findByJobNumber(String jobNumber);
 }
